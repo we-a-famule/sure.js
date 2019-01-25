@@ -16,9 +16,11 @@ http.get(url, function(res){
     res.on("end", function(){
         fs.writeFile("./logonew.png", imgData, "binary", function(err){
             if(err){
-                console.log("down fail");
+                console.log("下载失败");
+                process.exit(0);
             }
-            console.log("down success");
+            console.log("下载成功");
+            process.exit(0);
         });
     });
 });
