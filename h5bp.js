@@ -734,7 +734,7 @@ fs.writeFileSync("./index.html",`
     <p>Hello world! This is HTML5 Boilerplate.</p>
     <script src="js/vendor/modernizr-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
@@ -747,6 +747,62 @@ fs.writeFileSync("./index.html",`
 </body>
 </html>
 `);
+fs.writeFileSync("icon.png",`
+ffd8 ffe0 0010 4a46 4946 0001 0100 0001
+0001 0000 ffdb 0043 0010 0b0c 0e0c 0a10
+0e0d 0e12 1110 1318 281a 1816 1618 3123
+251d 283a 333d 3c39 3338 3740 485c 4e40
+4457 4537 3850 6d51 575f 6267 6867 3e4d
+7179 7064 785c 6567 63ff db00 4301 1112
+1218 1518 2f1a 1a2f 6342 3842 6363 6363
+6363 6363 6363 6363 6363 6363 6363 6363
+6363 6363 6363 6363 6363 6363 6363 6363
+6363 6363 6363 6363 6363 6363 6363 ffc0
+0011 0802 0002 0003 0122 0002 1101 0311
+01ff c400 1b00 0002 0301 0101 0000 0000
+0000 0000 0000 0203 0104 0500 0607 ffc4
+003c 1000 0202 0103 0205 0303 0302 0503
+0403 0001 0200 1103 0412 2131 4105 1322
+5161 3271 8114 2391 0642 5233 a115 2443
+b1c1 5362 8234 7292 d135 e1f1 ffc4 0018
+0101 0101 0101 0000 0000 0000 0000 0000
+0000 0102 0304 ffc4 001b 1101 0101 0101
+0101 0100 0000 0000 0000 0000 0111 0212
+3121 41ff da00 0c03 0100 0211 0311 003f
+00db 56a0 4591 628c ace1 94da 3711 bcfd
+5dbb c875 1b49 51c4 e1aa 58c8 e0d9 3721
+d8bf 2671 3c91 706e 0452 d748 35f3 24b7
+1049 be90 6343 4390 be06 4636 53bc 1ca7
+703f 0247 8755 6535 c102 7653 58dc 9ec0
+c18c cc05 f7b0 66ea 65d4 1d0e e945 1d4b
+2b0e 844b 4091 ed44 7494 38e6 5663 7cd4
+95d5 0048 a94d 9b6b 4353 08b4 7520 0e09
+b8a3 9ae0 2d57 2210 5a10 68bc cc84 8a62
+07c4 2395 d578 668b 5ebc 430d b588 e088
+0c4d 5652 4292 4afc c67e a72e e344 6d1d
+0189 db7d e46c 37f1 2606 e4d5 33f2 005e
+dc44 af94 0d16 ebef 0b60 3c5c 5b60 ea7a
+c60b 2318 5f58 ca07 794f 2b23 642c 493e
+f716 e181 e4f6 e90b 673f 712e 02f3 1197
+82df 10d0 13e9 2490 4778 944a 12c6 353b
+2142 e2aa 2b32 fa7a 4a58 f57a 8624 64ae
+0f15 0fcf 7268 ccb6 95e5 8830 cb50 1714
+0d35 c32c 08e8 4fda 15dd 408b 70c0 9e38
+860b 7408 c7f1 1a98 3505 4fed 311e f06a
+a25d fda6 8622 bfa7 249e 6257 4d9b 192e
+71ee 1545 655c b95b 1fa2 88f8 9116 b236
+dc60 88bc 8e4f 3baa 561a 82e2 a73b 31ef
+2876 0cb5 9002 491f 32c9 7da2 838b 1de6
+70e0 dc6b e40d 7425 c416 5cad 4298 1f79
+2b94 d700 0882 2c42 0bb4 1b30 2fe0 c94a
+4d0b 8e04 5eed a2cc cfc1 9312 5872 7996
+7f53 8ea8 34ce 29c5 d493 5c08 b23b c58c
+f8eb ac9f 3948 eb18 6872 b6d2 4a9b 3017
+2364 c86e bf30 11ac 9be9 7389 5f32 eb88
+c5d3 796
+`)
+console.log("png图片初始化")
+fs.writeFileSync("browserconfig.xml","");
 fs.writeFileSync("browserconfig.xml","");
 fs.writeFileSync("humans.txt","");
 fs.writeFileSync("LICENSE.txt","");
