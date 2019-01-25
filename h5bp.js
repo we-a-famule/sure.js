@@ -1,6 +1,10 @@
 var fs= require("fs") // 引入fs模块
 var dirName = process.argv[2] // 你传的参数是从第 2 个开始的
 // 判断的方法fs.exists(path, callback)
+if(dirName == undefined){
+    console.log("没有输入目录")
+    process.exit(0);    
+}
 fs.exists(dirName, function(exists) {
 if(exists){
     console.log("目录存在或您输入错误");
