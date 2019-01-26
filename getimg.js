@@ -69,6 +69,7 @@ https.get(url, function(res){
                 process.exit(0);
             }
             console.log("图片4下载成功");
+            console.log("图片加载完毕！")
             process.exit(0);
         });
     });
