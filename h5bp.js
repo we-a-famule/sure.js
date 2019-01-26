@@ -711,7 +711,7 @@ fs.exists(dirName, function(exists) {
   </body>
 </html>
 `);
-        fs.writeFileSync("browserconfig.xml","");
+        fs.writeFileSync("browserconfig.xml",``);
         fs.writeFileSync("humans.txt","");
         fs.writeFileSync("./index.html",`
     <!doctype html>
@@ -726,6 +726,7 @@ fs.exists(dirName, function(exists) {
     
       <link rel="manifest" href="site.webmanifest">
       <link rel="apple-touch-icon" href="icon.png">
+	  <link rel="icon" href="favicon.ico">
       <!-- Place favicon.ico in the root directory -->
     
       <link rel="stylesheet" href="css/normalize.css">
@@ -741,7 +742,7 @@ fs.exists(dirName, function(exists) {
       <p>Hello world! This is HTML5 Boilerplate.</p>
       <script src="js/vendor/modernizr-3.6.0.min.js"></script>
       <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+      <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"')><\/script>
       <script src="js/plugins.js"></script>
       <script src="js/main.js"></script>
     
@@ -826,12 +827,12 @@ fs.exists(dirName, function(exists) {
                         process.exit(0);
                     }
                     console.log("tile.png生成成功");
+					console.log("图片模板构建完成")
+					console.log("索引构建完成！");
+					console.log("初始化模板完成");
                     process.exit(0);
                 });
             });
         });
-        console.log("图片模板构建完成")
-        console.log("索引构建完成！");
-        console.log("初始化模板完成");
     }
 });
