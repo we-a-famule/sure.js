@@ -1,7 +1,10 @@
 var https = require("https");
-var fs= require("fs") // 引入fs模块
-var dirName = process.argv[2] // 你传的参数是从第 2 个开始的
-// 判断的方法fs.exists(path, callback)
+var fs= require("fs")
+var dirName = process.argv[2]
+if(dirName == undefined){
+    console.log("没有输入目录")
+    process.exit(0);    
+}
 fs.exists(dirName, function(exists) {
     if(exists){
         console.log("目录存在或您输入错误");
@@ -843,21 +846,11 @@ fs.exists(dirName, function(exists) {
                         console.log("tile.png生成失败");
                         process.exit(0);
                     }
-                    fs.stat('./favicon.ico', function (err, stats) {
-                        if (err) {
-							console.log("没有favicon.ico");
-							process.exit(0);
-                        }						
-						else {
-							console.log("tile.png生成成功");
-							console.log("图片模板构建完成");
-							console.log("索引构建完成！");
-							console.log("初始化模板完成");
-							process.exit(0);
-						}
-                     });
-//这里是最后执行的地方
-                    
+                    console.log("tile.png生成成功");
+                    console.log("图片模板初始化完成");
+                    console.log("索引建立完成");
+                    console.log("模板初始化完成");
+                    process.exit(0);
                 });
             });
         });
