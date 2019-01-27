@@ -711,7 +711,24 @@ fs.exists(dirName, function(exists) {
   </body>
 </html>
 `);
-        fs.writeFileSync("browserconfig.xml",``);
+        fs.writeFileSync("browserconfig.xml",`<tile>
+  <visual lang="en-US" version="2">  
+    <binding template="TileSquare150x150PeekImageAndText04" branding="name">
+      <image id="1" src="images/2.jpg"/>
+      <text id="1">Serving Today: Samosas</text> 
+    </binding>
+
+    <binding template="TileWide310x150ImageAndText01" branding="name">
+      <image id="1" src="images/2.jpg"/> 
+      <text id="1">Serving Today: Samosas</text>
+    </binding>
+
+    <binding template="TileSquare310x310ImageAndText01" branding="name">
+      <image id="1" src="images/2jpg"/>
+      <text id="1">Serving Today: Samosas</text>
+    </binding>
+  </visual>
+</tile>`);
         fs.writeFileSync("humans.txt","");
         fs.writeFileSync("./index.html",`
     <!doctype html>
@@ -826,11 +843,21 @@ fs.exists(dirName, function(exists) {
                         console.log("tile.png生成失败");
                         process.exit(0);
                     }
-                    console.log("tile.png生成成功");
-					console.log("图片模板构建完成")
-					console.log("索引构建完成！");
-					console.log("初始化模板完成");
-                    process.exit(0);
+                    fs.stat('./favicon.ico', function (err, stats) {
+                        if (err) {
+							console.log("没有favicon.ico");
+							process.exit(0);
+                        }						
+						else {
+							console.log("tile.png生成成功");
+							console.log("图片模板构建完成");
+							console.log("索引构建完成！");
+							console.log("初始化模板完成");
+							process.exit(0);
+						}
+                     });
+//这里是最后执行的地方
+                    
                 });
             });
         });
